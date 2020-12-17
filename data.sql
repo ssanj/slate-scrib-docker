@@ -1,0 +1,1 @@
+INSERT INTO SCRIB (MESSAGE, CREATED_AT, UPDATED_AT) VALUES ('# Welcome to Scrib\nThis is your first note', '2020-01-01T00:00:00.000', '2020-01-01T00:00:00.000');
