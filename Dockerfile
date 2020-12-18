@@ -2,10 +2,12 @@ FROM debian:buster
 
 WORKDIR /work
 
-apt-get update && apt-get install -y curl unzip sqlite3
+RUN apt-get update && apt-get install -y curl unzip sqlite3
 
 ADD . .
 
+RUN mkdir -p /app
+
 RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
