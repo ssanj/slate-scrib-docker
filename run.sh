@@ -10,4 +10,4 @@ docker run \
   -e API_KEY=$SLATE_API_KEY \
   -e SLATE_VERSION='0.1.0.8' \
   -e SCRIB_VERSION='0.1.0.0' \
-  slate-scrib:v7
+  ssanj/slate-scrib@sha256:ffe676e2c95a687a9a61e9d946a073c60d513d39852b1e95eb215ce3e3102953
