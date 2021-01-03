@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+   slate-app:
+     restart: always
+     image:  slate-scrib-state-v8-a1
+     container_name: slate-app
+     ports:
+        - 3000:3000
+     volumes:
+       - "./volumes/slate-app/db:/app/db"
+     environment:
+       # - VIRTUAL_HOST=
+       # - VIRTUAL_NETWORK=nginx-proxy
+       # - VIRTUAL_PORT=3000
+       # - LETSENCRYPT_HOST=
+       # - LETSENCRYPT_EMAIL=
+       - SLATE_API_KEY=YOUR_API_KEY

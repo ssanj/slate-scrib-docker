@@ -1,39 +1,51 @@
 # Scrib/Slate Docker
 
-Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](https://github.com/ssanj/slate) backend creates a docker container.
+Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](https://github.com/ssanj/slate) backend creates a Docker container.
 
 ## Updating to a newer version of Scrib or Slate
 
-- Update the Scrib and Slate versions as required in `run.sh`.
-- Commit the changes
-- Run `run.sh`
+- Update `publish.sh` with the latest versions of `SLATE_VERSION` and
+`SCRIB_VERSION`. Also bump `BUILD_VERSION`
+- This will build and publish an image of the form: `${BUILD_VERSION}-SL_${SLATE_VERSION}-SC_${SCRIB_VERSION}`
+- Update `run.sh` with the new image version and SLATE_API_KEY (if changed)
+- Update `docker-compose` with the new image version and SLATE_API_KEY (if changed)
 
-Then execute `run.sh` with the SLATE_API_KEY defined:
+## Database
 
-```
-SLATE_API_KEY=SOME_API_KEY ./run.sh
-```
+There's a simple version of the slate database at `./volumes/slate-app/db/`. This can be downloaded from [slate-db](https://github.com/ssanj/slate-db/releases/). When releasing to Prod ensure to use an the current version of the database
 
-## Updating `entrypoint.sh` or the `Dockerfile`
+## Docker-compose
 
-- Update `entrypoint.sh`
-- Update `Dockerfile`
-- Update `publish.sh` with new image version eg. `slate:vX`
-- Run `publish.sh` to build and publish new docker image version
-- Update `run.sh` to use new docker image
-- Commit the changes
-- Run `run.sh`
+_Ensure to use your required `SLATE_API_KEY` environment variable in `docker-compose.yml` when running._
 
-## Copying across a database
-
-- Run the application with `run.sh`
-- copy your database file to the running container:
+To run with Docker Compose, use:
 
 ```
-docker cp your_db_name.db slate-app:/app/db/scrib.db
+docker-compose up
 ```
 
-_note_: a simple scrib database can be downloaded from [slate-db](https://github.com/ssanj/slate-db/releases/)
+and stop with:
+
+```
+docker-compose down
+```
+
+
+## Docker
+
+_Ensure to use your required `SLATE_API_KEY` environment variable when running through `run.sh`._
+
+To run via Docker use:
+
+```
+./run.sh
+```
+
+and stop with:
+
+```
+docker stop slate-app
+```
 
 
 ## Jumping on the running instance
