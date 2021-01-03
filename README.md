@@ -8,7 +8,11 @@ Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](ht
 - Commit the changes
 - Run `run.sh`
 
-Then execute `run.sh`
+Then execute `run.sh` with the SLATE_API_KEY defined:
+
+```
+SLATE_API_KEY=SOME_API_KEY ./run.sh
+```
 
 ## Updating `entrypoint.sh` or the `Dockerfile`
 
