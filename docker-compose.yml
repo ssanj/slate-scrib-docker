@@ -2,7 +2,7 @@ version: "2.4"
 services:
    slate-app:
      restart: always
-     image:  slate-scrib-state-v8-a1
+     image:  ssanj/slate-scrib@sha256:c79a04d978ecb7b7ce8285d1b0c281111516aeaa6be13e88481ee9ebb81401b6
      container_name: slate-app
      ports:
         - 3000:3000

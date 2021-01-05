@@ -53,3 +53,12 @@ docker stop slate-app
 ```
 docker exec -it slate-app /bin/bash
 ```
+
+## Updating Image and Restarting the System
+
+```
+docker-compose pull
+docker-compose down
+docker-compose up -d --remove-orphans
+docker image prune
+```
