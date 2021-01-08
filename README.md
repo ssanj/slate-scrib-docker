@@ -4,8 +4,11 @@ Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](ht
 
 ## Updating to a newer version of Scrib or Slate
 
-- Update `publish.sh` with the latest versions of `SLATE_VERSION` and
-`SCRIB_VERSION`. Also bump `BUILD_VERSION`
+- Update `publish.sh` with the latest versions of:
+  - `SLATE_VERSION`
+  - `SCRIB_VERSION`
+  - `BUILD_VERSION` (Bump)
+- Run `publish.sh`
 - This will build and publish an image of the form: `${BUILD_VERSION}-SL_${SLATE_VERSION}-SC_${SCRIB_VERSION}`
 - Update `run.sh` with the new image version and SLATE_API_KEY (if changed)
 - Update `docker-compose` with the new image version and SLATE_API_KEY (if changed)
