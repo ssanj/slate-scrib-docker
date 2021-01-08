@@ -21,6 +21,8 @@ There's a simple version of the slate database at `./volumes/slate-app/db/`. Thi
 
 _Ensure to use your required `SLATE_API_KEY` environment variable in `docker-compose.yml` when running._
 
+Docker-compose is used to start app on the production servers and it runs on port 3000.
+
 To run with Docker Compose, use:
 
 ```
@@ -38,13 +40,15 @@ docker-compose down
 
 _Ensure to use your required `SLATE_API_KEY` environment variable when running through `run.sh`._
 
+`run.sh` is used to run this application locally and as such it starts the app on port 5000.
+
 To run via Docker use:
 
 ```
 ./run.sh
 ```
 
-and stop with:
+To stop the app:
 
 ```
 docker stop slate-app
