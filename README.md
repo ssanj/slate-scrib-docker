@@ -10,6 +10,7 @@ Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](ht
   - `BUILD_VERSION` (Bump)
 - Run `publish.sh`
 - This will build and publish an image of the form: `${BUILD_VERSION}-SL_${SLATE_VERSION}-SC_${SCRIB_VERSION}`
+- Update `.env` with the full image repository/image url. Both `run.sh` and `docker-compose.yml` will source image to run from `.env`
 - Update `run.sh` with the new image version and SLATE_API_KEY (if changed)
 - Update `docker-compose` with the new image version and SLATE_API_KEY (if changed)
 

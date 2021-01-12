@@ -2,10 +2,10 @@ version: "2.4"
 services:
    slate-app:
      restart: always
-     image:  ssanj/slate-scrib@sha256:77ef9e968752dfa7f9f8bd3f353104fa98a1127c3158999b8fa66b325494df90
+     image:  $DOCKER_IMAGE
      container_name: slate-app
      ports:
-        - 3000:3000
+        - 5000:3000
      volumes:
        - "./volumes/slate-app/db:/app/db"
      environment:
