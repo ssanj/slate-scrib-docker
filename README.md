@@ -22,7 +22,7 @@ There's a simple version of the slate database at `./volumes/slate-app/db/`. Thi
 
 _Ensure to use your required `SLATE_API_KEY` environment variable in `docker-compose.yml` when running._
 
-Docker-compose is used to start app on the production servers and it runs on port 3000.
+Docker-compose is used to start app locally and it runs on port 5000.
 
 To run with Docker Compose, use:
 
@@ -35,7 +35,6 @@ and stop with:
 ```
 docker-compose down
 ```
-
 
 ## Docker
 
@@ -70,3 +69,7 @@ docker-compose down
 docker-compose up -d --remove-orphans
 docker image prune
 ```
+
+## Production Deploy
+
+See: blog-docker-containers

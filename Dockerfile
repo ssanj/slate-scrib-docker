@@ -14,10 +14,13 @@ RUN mkdir -p /app
 RUN echo "Building SLATE_VERSION=$SLATE_VERSION SCRIB_VERSION=$SCRIB_VERSION"
 
 RUN echo "downloading slate executable"
-RUN curl -L -o slate "https://github.com/ssanj/slate/releases/download/v${SLATE_VERSION}/slate-${SLATE_VERSION}-Linux"
+RUN curl -fLo slate "https://github.com/ssanj/slate/releases/download/v${SLATE_VERSION}/slate-${SLATE_VERSION}-Linux"
 
-RUN echo "downloading scrib bundle"
-RUN curl -L -o scrib.zip "https://github.com/ssanj/scrib/releases/download/v${SCRIB_VERSION}/scrib.zip"
+RUN echo "downloading scrib executable"
+RUN curl -fLo scrib.zip "https://github.com/ssanj/scrib/releases/download/v${SCRIB_VERSION}/scrib.zip"
+
+RUN echo "downloading scrib banner.txt"
+RUN curl -fLo banner.txt "https://github.com/ssanj/slate/releases/download/v${SLATE_VERSION}/banner.txt"
 
 RUN echo "making slate executable"
 RUN chmod +x slate
@@ -30,6 +33,9 @@ RUN unzip scrib.zip -d /app/static/
 
 RUN echo "Copying slate executable to app"
 RUN cp slate /app/
+
+RUN echo "Copying banner.txt to app"
+RUN cp banner.txt /app/
 
 RUN echo "Changing to app directory"
 RUN cd /app
