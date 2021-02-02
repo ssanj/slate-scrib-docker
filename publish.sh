@@ -3,9 +3,9 @@
 set -euo pipefail
 
 # Modify these when doing a new build
-BUILD_VERSION='v13'
+BUILD_VERSION='v14'
 SLATE_VERSION='0.1.0.12'
-SCRIB_VERSION='0.3.0.0'
+SCRIB_VERSION='0.3.0.1'
 IMAGE_VERSION="${BUILD_VERSION}-SL_${SLATE_VERSION}-SC_${SCRIB_VERSION}"
 
 # v8-SL_0.1.0.8_SC_0.1.0.0
