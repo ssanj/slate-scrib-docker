@@ -10,5 +10,5 @@ docker run \
   --name 'slate-app' \
   -v "$PWD/volumes/slate-app/db:/app/db" \
   -p 5000:3000 \
-  -e SLATE_API_KEY=YOUR_API_KEY \
+  -e SLATE_API_KEY=abcd1234 \
   $DOCKER_IMAGE

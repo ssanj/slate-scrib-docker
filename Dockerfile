@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 ARG SLATE_VERSION
 ARG SCRIB_VERSION

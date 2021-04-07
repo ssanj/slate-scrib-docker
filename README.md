@@ -18,6 +18,12 @@ Packages the [Scrib](https://github.com/ssanj/scrib) frontend and the [Slate](ht
 
 There's a simple version of the slate database at `./volumes/slate-app/db/`. This can be downloaded from [slate-db](https://github.com/ssanj/slate-db/releases/). When releasing to Prod ensure to use an the current version of the database
 
+```
+curl -L https://github.com/ssanj/slate-db/releases/download/${DB_VERSION}/slate-${DB_VERSION}.db --output /volumes/slate-app/db/scrib.db
+```
+
+This database volume will be mounted when running `run.sh`
+
 ## Docker-compose
 
 _Ensure to use your required `SLATE_API_KEY` environment variable in `docker-compose.yml` when running._

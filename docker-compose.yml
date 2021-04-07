@@ -14,4 +14,4 @@ services:
        # - VIRTUAL_PORT=3000
        # - LETSENCRYPT_HOST=
        # - LETSENCRYPT_EMAIL=
-       - SLATE_API_KEY=YOUR_API_KEY
+       - SLATE_API_KEY=abcd1234
